@@ -1,0 +1,362 @@
+:root {
+    --primaryColor:#0e6253;
+    --secondaryColor: #ffc107;
+    --whiteColor: #fff;
+    --blackColor:#222;
+    --softGreenColor: #d9f2ee;
+    --darkGreyColor: #a7a7a7;
+    --greyColor:#f5f5f5;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: "Open Sans", sans-serif;
+}
+body{
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+.sidebar{
+    height: 100%;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 2%;
+    background-color: var(--primaryColor);
+    color: var(--whiteColor);
+}
+.sidebarmenu{
+    display: flex;
+    flex-direction: column;
+}
+.sidebarmenu a , .sidebarlogout a{
+    padding: 5% 8%;
+    margin: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    text-decoration: none;
+    color: var(--whiteColor);
+}
+.sidebarmenu a ion-icon , .sidebarlogout a ion-icon{
+    font-size: 30px;
+}
+.sidebarmenu a:hover , .sidebarlogout a:hover{
+    background-color: var(--secondaryColor);
+    border-radius: 50px;
+}
+.main{
+    width: 100%;
+    height: max-content;
+    min-height: 100vh;
+    padding: 2%;
+    background-color: var(--softGreenColor);
+    margin-left: 250px;
+}
+.mainnavbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu-toggle{
+    display: none;
+}
+
+.search{
+    width: 60%;
+    height: 40px;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 20px;
+}
+.search input{
+    width: 80%;
+    height: 100%;
+    padding: 20px;
+    border: none;
+    border-radius: 20px;
+}
+.searchbutton{
+    background-color: var(--secondaryColor);
+    color: var(--whiteColor);
+    border: none;
+    border-radius: 20px;
+    width: 120px;
+    cursor: pointer;
+}
+.search:hover{
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.searchbutton:hover{
+    background-color: var(--primaryColor);
+}
+.profile{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.cart, .user{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--whiteColor);
+    font-size: 20px;
+    color: var(--primaryColor);
+    text-decoration: none;
+    padding: 0 10px;
+    height: 40px;
+    border-radius: 50%;
+}
+.cart:hover, .user:hover{
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.mainhighlight{
+    margin: 3% 0;
+    padding: 2%;
+    background-color: var(--secondaryColor);
+    border-radius: 8px;
+}
+.mainheader{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+.maintitle{
+    font-size: 20px;
+}
+.mainarrow{
+    font-size: 24px;
+}
+.back , .next{
+    cursor: pointer;
+}
+.back:hover , .next:hover{
+    color: var(--primaryColor);
+}
+.highlightwrapper{
+    width: 100%;
+    display: flex;
+    padding: 1%;
+    border-radius: 8px;
+    gap: 1.5rem;
+    overflow-x: hidden;
+}
+.highlightcard{
+    display: flex;
+    flex-direction: row;
+    min-width: 250px;
+    width: 80%;
+    height: 100%;
+    gap: 1rem;
+    border-radius: 8px;
+    padding: 1%;
+    background-color: var(--greyColor);
+    cursor: pointer;
+}
+.highlightimage{
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    object-fit: cover;
+    object-position: center;
+}
+.highlightdesc h4{
+    color: var(--primaryColor);
+}
+.highlightdesc p{
+    color: var(--blackColor);
+    font-size: 13px;
+}
+.highlightcard:hover{
+    background-color: var(--whiteColor);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.mainmenus{
+    height: 100%;
+    background-color: var(--greyColor);
+    padding: 2%;
+    border-radius: 8px;
+}
+.mainfilter{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 1.5rem;
+    gap: 1rem;
+}
+.backmenus, .nextmenus{
+    cursor: pointer;
+}
+.backmenus:hover , .nextmenus:hover{
+    background-color: var(--primaryColor);
+}
+.filterwrapper{
+    display: flex;
+    justify-content: flex-start;
+    overflow-x: hidden;
+    width: 100%;
+    height: 100px;
+    gap: 1.2rem;
+}
+.filtercard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    min-width: 80px;
+    height: 100%;
+    background-color: var(--whiteColor);
+    color: var(--blackColor);
+    border-radius: 8px;
+    border: 1px solid var(--softGreenColor);
+    font-size: 14px;
+    cursor: pointer;
+}
+.filtericon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 60%;
+    font-size: 30px;
+    background-color: var(--softGreenColor);
+    color: var(--primaryColor);
+    border-radius: 8px;
+}
+.filtercard:hover{
+    background-color: var(--primaryColor);
+    color: var(--whiteColor);
+}
+.divider{
+    margin: 1rem 0;
+    height: 1px;
+    width: 100%;
+    background-color: var(--primaryColor);
+    border: none;
+}
+.maindetail{
+    margin: 1rem 0 1.5rem 0;
+}
+.detailwrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
+    width: 100%;
+    margin-top: 1rem;
+    gap: 2%;
+    border-radius: 8px;
+}
+.detail.card{
+    min-height: 280px;
+    height: 100%;
+    background-color: var(--whiteColor);
+    border-radius: 8px;
+    margin: 1% 0;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    cursor: pointer;
+}
+.detailimage{
+    width: 100%;
+    height: 180px;
+    border-radius: 8px;
+    object-fit: cover;
+    object-position: center;
+    filter: brightness(0.8);
+}
+.detaildesc{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 3%;
+    width: 100%;
+}
+.detailsub{
+    font-size: 12px;
+    color: var(--darkGreyColor);
+    letter-spacing: 0.5;
+    margin: 1% 0;
+
+}
+.price{
+    color: var(--primaryColor);
+
+}
+.detailfavourite{
+    font-size: 24px;
+}
+.detailcard:hover{
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.detailcard:hover .detailimage{
+    filter: opacity(1);
+
+}
+.detailcard:hover .detailname h4{
+    color: var(--primaryColor);
+}
+.detailcard:hover .price{
+    letter-spacing: 1.5;
+}
+@media screen and (max-width: 1500px){
+
+    .sidebar{
+        display: none;
+    }
+    .main{
+        margin-left: 0;
+    }
+    .menu-toggle{
+        display: block;
+        text-decoration: none;
+        font-size: 20px;
+        background-color: var(--whiteColor);
+        color: var(--primaryColor);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 10px;
+        height: 40px;
+        border-radius: 50%;
+        z-index: 3;
+
+    }
+    .sidebar.active{
+        display: flex;
+        z-index: 10;
+    }
+}
+.btn{
+    width: 100px;
+    height: 40px;
+    border-radius: 8px;
+    padding: 5px;
+    background-color: var(--primaryColor);
+    border: none;
+    color: var(--whiteColor);
+    cursor: pointer;
+}
+.btn:hover{
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    background-color: var(--secondaryColor);
+    color: #222;
+}
+.cartnumber{
+    background-color: red;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    margin-top: 20px;
+    color: var(--whiteColor);
+    
+}
+
